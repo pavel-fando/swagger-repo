@@ -56,9 +56,10 @@
             font-family:sans-serif;
             font-size:15px;
             font-weight:bold;
-            padding:11px 23px;
+            padding:11px;
             text-decoration:none;
             text-shadow:0 -1px 0 #7a2a1d;
+            width: auto;
         }
         .specific-button:hover {
             background-color:#b34332;
@@ -148,7 +149,7 @@
             font-family:sans-serif;
             margin-bottom:30px
         }
-        #submit {
+        .submit-btn {
             text-decoration:none;
             width:100%;
             text-align:center;
@@ -161,6 +162,19 @@
             cursor:pointer;
             border-radius:5px
         }
+        .cancel-btn {
+             text-decoration:none;
+             width:100%;
+             text-align:center;
+             display:block;
+             background-color: #757575;
+             color:#fff;
+             border:1px solid #757575;
+             padding:10px 0;
+             font-size:20px;
+             cursor:pointer;
+             border-radius:5px
+         }
         button {
             width:10%;
             height:45px;
@@ -188,14 +202,13 @@
 <div id="abc">
     <div id="popupContact">
         <!-- Contact Us Form -->
-        <form action="#" id="form" method="post" name="form">
+        <form action="#" id="form-new-branch" method="post" name="form">
             <img id="close" src="images/3.png" onclick="hideDiv()">
             <h2>Contact Us</h2>
             <hr>
-            <input id="name" name="name" placeholder="Name" type="text"/>
-            <input id="email" name="email" placeholder="Email" type="text"/>
-            <textarea id="msg" name="message" placeholder="Message"></textarea>
-            <a href="javascript:%20checkEmpty()" id="submit">Send</a>
+            <input id="name" name="name" placeholder="BranchName" type="text"/>
+            <a href="javascript:%20checkEmpty()" class="submit-btn">Send</a>
+            <a href="javascript:%20hideDiv()" class="cancel-btn">Cancel</a>
         </form>
     </div>
 </div>
